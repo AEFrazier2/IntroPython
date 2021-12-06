@@ -4,7 +4,7 @@ print("Welcome to the WorldWide Vacation Budget Planner")
 # Prompting user to enter password with while loop
 attempts = 0
 is_valid = True
-while attempts < 3 and is_valid == True:
+while attempts < 3:
     attempts += 1
     is_valid = input("Please enter your password to begin: ")
     if constants.PASSWORD == is_valid:
@@ -12,10 +12,10 @@ while attempts < 3 and is_valid == True:
     if constants.PASSWORD != is_valid:
         is_valid = False
         print("The password is incorrect. Please try again")
-    elif attempts > 3 and is_valid != True: 
+    elif attempts > 3: 
         print("You have exceeded the maximum number of password attempts")    
 keep_going = True
-while keep_going == True and constants.PASSWORD == is_valid:
+while keep_going == True and is_valid == True:
 # Print welcome to user and provide travel destination options
     print(f"Welcome {user_name}, our available travel destinations are Mexico or Jamaica: ")
 # Prompting user to enter their desired destination
@@ -31,7 +31,7 @@ while keep_going == True and constants.PASSWORD == is_valid:
       money = input("How much spending money in USD will you need for your trip?: ")
       spend_dollars = int(money)
       spend_per_day = float(round(spend_dollars / travel_days, 2))
-    # Exchange rate is not a constant because it fluctuates
+# Exchange rate is not a constant because it fluctuates
       spend_pesos = float(round(spend_dollars / 21.73, 2))
       spend_conversion = (float(round(spend_pesos / travel_days, 2)))
       print(f"Your {spend_dollars} USD in spending money equals {spend_per_day} USD/day or {spend_conversion} Mexican pesos/day ")
@@ -46,7 +46,7 @@ while keep_going == True and constants.PASSWORD == is_valid:
        money = input("How much spending money in USD will you need for your trip?: ")
        spend_dollars = int(money)
        spend_per_day = float(round(spend_dollars / travel_days, 2))
-    # Exchange rate is not a constant because it fluctuates
+# Exchange rate is not a constant because it fluctuates
        spend_jdollars = float(round(spend_dollars / 155.67, 2))
        spend_conversion = (float(round(spend_jdollars / travel_days, 2)))
        print(f"Your {spend_dollars} USD in spending money equals {spend_per_day} USD/day or {spend_conversion} Jamaican dollars/day ")
@@ -62,9 +62,5 @@ while keep_going == True and constants.PASSWORD == is_valid:
        #if <condition>
           #change the boolean to false
 
-
-
-
-         
 
      
